@@ -34,6 +34,14 @@
 }
 
 // Custom classes below:
+.text-content {
+  padding: 10px; /* Adds space around the content */
+  margin: 10px 0; /* Adds space above and below the content */
+  text-align: left; /* Aligns text to the left */
+  border-left: 2px solid #ccc; /* Optional: Adds a border for visual separation */
+  line-height: 1.5; /* Improves readability */
+}
+
 .text-container {
   display: flex;
   flex-direction: column;
@@ -95,6 +103,10 @@ ion-card-subtitle {
 @media (max-width: 767px) {
   .text-container {
     margin-top: 0; /* Reset margin for small screens */  
+  }
+  .text-content {
+    padding-left: 20px; /* Increases left padding on smaller screens */
+    margin: 5px 0; /* Adjusts vertical margin for smaller screens */
   }
 }
 
