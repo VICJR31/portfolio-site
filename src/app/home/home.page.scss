@@ -1,6 +1,13 @@
+#home,
+#about,
+#projects,
+#experiences,
+#contact {
+  scroll-margin-top: 60px; /* Adjust this value based on your header height */
+}
+
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -25,3 +32,75 @@
 #container a {
   text-decoration: none;
 }
+
+// Custom classes below:
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px; /* Adjust this value to move the text up or down */
+  // align-self: flex-start; /* Adjust this value to move the text up or down */
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.stacked-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.linkedin-link {
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--ion-color-primary);
+}
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+
+// ion-card {
+//   padding-top: 20px; /* Ensure this is larger than your header's height */
+// }
+
+ion-card-title {
+  font-size: 1.5em;
+}
+ion-card-subtitle {
+  font-size: 1.2em;
+}
+
+/* Media query to adjust font sizes for larger screens */
+@media (min-width: 768px) {
+  ion-card-title {
+    font-size: 2em;
+  }
+  ion-card-subtitle {
+    font-size: 1.5em;
+  }
+}
+
+// /* Media query to reset align-self for small screens */
+@media (max-width: 767px) {
+  .text-container {
+    margin-top: 0; /* Reset margin for small screens */  
+  }
+}
+
+/* Media query to reset align-self for small screens */
+// @media (max-width: 767px) {
+//   .text-container {
+//     align-self: center; /* Center the text container on smaller screens */
+//   }
+// }

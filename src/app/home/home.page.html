@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button>
+    <ion-button (click)="scrollToElement('home')">
       Alex's Site
     </ion-button>
     <ion-buttons slot="end">
-      <ion-button>About</ion-button>
-      <ion-button>Projects</ion-button>
-      <ion-button>Experiences</ion-button>
-      <ion-button>Contact</ion-button>
+      <ion-button (click)="scrollToElement('about')">About</ion-button>
+      <ion-button (click)="scrollToElement('projects')">Projects</ion-button>
+      <ion-button (click)="scrollToElement('experiences')">Experiences</ion-button>
+      <ion-button (click)="scrollToElement('contact')">Contact</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -19,17 +19,191 @@
     </ion-toolbar>
   </ion-header>
 
-  <!-- <div id="container"> -->
-  <ion-card>
+  <!-- Home Subpage -->
+  <ion-card id="home">    
     <ion-card-content>
-      <h1>Hello There!</h1>
-      <h2>I'm Alex!</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" size="12">
+            <div class="text-container">
+              <ion-card-title>Hello There!</ion-card-title>
+              <ion-card-subtitle>I'm Alex!</ion-card-subtitle>
+              <ion-button (click)="scrollToElement('contact')" expand="block">CONTACT ME!</ion-button>
+            </div>
+          </ion-col>
 
-      <a href="#contact">CONTACT ME!</a>
+          <ion-col size-md="6" size="12">
+            <div class="image-container">
+              <img alt="Profile Pic I" src="https://ionicframework.com/docs/img/demos/card-media.png" />    
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>   
     </ion-card-content>
-    <hr>
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  <!-- </div> -->
-</ion-card>
+
+    <!-- Border between New & Old code -->
+    <!-- <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+  </ion-card>
+
+  <!-- About Subpage -->
+  <ion-card id="about">    
+    <ion-card-header>
+      <ion-card-title>About Section</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" size="12">
+            <div class="image-container">
+              <img alt="Profile Pic II" src="https://ionicframework.com/docs/img/demos/card-media.png" />    
+            </div>
+          </ion-col>
+
+          <ion-col size-md="6" size="12">
+            <div>
+              <p>Wilkommen auf unserer Seite. Aquí puedes encontrar información sobre nuestros servicios. Bitte kontaktieren Sie uns, wenn Sie Fragen haben. Nuestra misión es proporcionar el mejor servicio.</p>
+  
+              <p>Der schnelle braune Fuchs springt über den faulen Hund. La casa es muy grande y tiene un jardín hermoso. We strive to meet all your expectations and provide outstanding value.</p>
+              
+              <p>Gracias por visitarnos. Besuchen Sie uns bald wieder. We appreciate your interest and look forward to serving you. Todo lo mejor y auf Wiedersehen!</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>   
+    </ion-card-content>
+  </ion-card>
+
+  <!-- About Me Subpage -->
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>About Me Section</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img alt="Profile Pic II" src="https://ionicframework.com/docs/img/demos/card-media.png" />  
+    </ion-card-content>
+
+    <ion-card-content>
+      <p>Content for about section.</p> 
+      <p>Wilkommen auf unserer Seite. Aquí puedes encontrar información sobre nuestros servicios. Bitte kontaktieren Sie uns, wenn Sie Fragen haben. Nuestra misión es proporcionar el mejor servicio.</p>
+  
+      <p>Der schnelle braune Fuchs springt über den faulen Hund. La casa es muy grande y tiene un jardín hermoso. We strive to meet all your expectations and provide outstanding value.</p>
+      
+      <p>Gracias por visitarnos. Besuchen Sie uns bald wieder. We appreciate your interest and look forward to serving you. Todo lo mejor y auf Wiedersehen!</p>
+    </ion-card-content>
+  </ion-card> -->
+
+  <!-- Projects Subpage -->
+  <ion-card id="projects">
+    <ion-card-header>
+      <ion-card-title>Projects Section</ion-card-title>
+    </ion-card-header>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Title: Box 1</ion-card-title>
+        <ion-card-subtitle>Length: Short</ion-card-subtitle>
+        <ion-card-subtitle>
+          <a href="https://github.com/example/repo1">Source Code</a>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Description: This is the description for box 1.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Title: Box 2</ion-card-title>
+        <ion-card-subtitle>Length: Short</ion-card-subtitle>
+        <ion-card-subtitle>
+          <a href="https://github.com/example/repo1">Source Code</a>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Description: This is the description for box 2.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Title: Box 3</ion-card-title>
+        <ion-card-subtitle>Length: Short</ion-card-subtitle>
+        <ion-card-subtitle>
+          <a href="https://github.com/example/repo1">Source Code</a>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Description: This is the description for box 3.
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+
+  <!-- Experiences Subpage -->
+  <ion-card id="experiences">
+    <ion-card-header>
+      <ion-card-title>Experiences Section</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Title: ISA</ion-label>
+          <div>
+            Length: __-___     
+            Description: This is the description for box 1.     
+          </div>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Title: Domino's Insider</ion-label>
+          <div>
+            Length: __-___     
+            Description: This is the description for box 2.     
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Subpage -->
+  <ion-card id="contact">
+    <!-- <ion-card-header>
+      <ion-card-title>Contact Me</ion-card-title>
+    </ion-card-header> -->
+
+    <div class="stacked-container" id="contact">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Contact Me</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Email: alejandroromo31st&#64;gmail.com</p>
+          <ion-button href="https://www.linkedin.com/in/alejandro-romo-16399626b/" target="_blank" expand="block">LinkedIn</ion-button>
+          <ion-button href="https://github.com/alejandroromo31st" target="_blank" expand="block">GitHub</ion-button>
+          <ion-button href="https://gitlab.com/alejandroromo31st" target="_blank" expand="block">GitLab</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> &copy; 2024 Your Company Name. All rights reserved. </ion-title>
+  </ion-toolbar>
+  <!-- <ion-content>
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+  </ion-content> -->
+</ion-footer>
