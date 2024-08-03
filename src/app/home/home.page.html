@@ -1,9 +1,13 @@
+<!-- Testing NAVBAR -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button (click)="scrollToElement('home')">
-      Alex's Site
-    </ion-button>
-    <ion-buttons slot="end">
+    <ion-buttons slot="start">
+      <!-- Menu button visible only on small screens -->
+      <ion-menu-button class="menu-icon" slot="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alex's Site</ion-title>
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button (click)="scrollToElement('home')">Home</ion-button>
       <ion-button (click)="scrollToElement('about')">About</ion-button>
       <ion-button (click)="scrollToElement('projects')">Projects</ion-button>
       <ion-button (click)="scrollToElement('experiences')">Experiences</ion-button>
@@ -11,6 +15,26 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!-- Side menu for mobile -->
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="scrollToElement('home')">Home</ion-item>
+      <ion-item button (click)="scrollToElement('about')">About</ion-item>
+      <ion-item button (click)="scrollToElement('projects')">Projects</ion-item>
+      <ion-item button (click)="scrollToElement('experiences')">Experiences</ion-item>
+      <ion-item button (click)="scrollToElement('contact')">Contact</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -34,7 +58,8 @@
 
           <ion-col size-md="6" size="12">
             <div class="image-container">
-              <img alt="Profile Pic I" src="https://ionicframework.com/docs/img/demos/card-media.png" />    
+              <img alt="Profile Pic I" src="../../assets/images/IMG_7231.jpg" />     
+              <!-- <img alt="Profile Pic I" src="../../assets/images/CSU_San_Bernardino_seal.svg.png"/>      -->
             </div>
           </ion-col>
         </ion-row>
@@ -55,8 +80,8 @@
       <ion-grid>
         <ion-row>
           <ion-col size-md="6" size="12">
-            <div class="image-container">
-              <img alt="Profile Pic II" src="https://ionicframework.com/docs/img/demos/card-media.png" />    
+            <div class="image-containerII">
+              <img alt="Profile Pic II" src="../../assets/images/IMG_2722.jpg" />    
             </div>
           </ion-col>
 
@@ -94,7 +119,6 @@
     </ion-card-content>
   </ion-card> -->
 
-<!-- TEST TEST TEST II!!!! -->
   <!-- Projects Subpage -->
   <ion-card id="projects">
     <ion-card-header>
@@ -105,9 +129,9 @@
         <ion-col size="12" size-sm="6" size-md="4">
           <ion-card>
             <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
+              alt="TL-191 Book Series"
+              src="../../assets/images/Timeline-191_WWI.png"
+              class="responsive-image project-image"
             />
             <ion-card-header>
               <ion-card-title>Title: Box 1</ion-card-title>
@@ -125,9 +149,9 @@
         <ion-col size="12" size-sm="6" size-md="4">
           <ion-card>
             <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
+              alt="Health App"
+              src="../../assets/images/goldenhealth.png"
+              class="responsive-image project-image"
             />
             <ion-card-header>
               <ion-card-title>Title: Box 2</ion-card-title>
@@ -145,9 +169,9 @@
         <ion-col size="12" size-sm="6" size-md="4">
           <ion-card>
             <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
+              alt="Trench Wars"
+              src="../../assets/images/triple-entente-14176153.jpg.webp"
+              class="responsive-image project-image"
             />
             <ion-card-header>
               <ion-card-title>Title: Box 3</ion-card-title>
@@ -166,145 +190,6 @@
     </ion-grid>
   </ion-card>
 
-<!-- ---------- -->
-
-
-<!-- TEEEEEEEEEEEEEEEESSSSSSSSSSSSSSTTTTTTTTTTIIIINNNNNNNGGGGGGG!!!! -->
-<!-- Projects Subpage -->
-  <ion-card id="projects">
-    <ion-card-header>
-      <ion-card-title>Projects Section</ion-card-title>
-    </ion-card-header>
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col size-xs="12" size-sm="10" size-md="4">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
-            />
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-card-header>
-        <ion-card-title>Title: Box 1</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 1.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col size-xs="12" size-sm="10" size-md="4">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
-            />
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-card-header>
-        <ion-card-title>Title: Box 2</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 2.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col size-xs="12" size-sm="10" size-md="4">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="responsive-image"
-            />
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-card-header>
-        <ion-card-title>Title: Box 3</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 3.
-      </ion-card-content>
-    </ion-card>
-  </ion-card>
-
-
-<!-- ----- -->
-
-  <!-- Projects Subpage -->
-  <ion-card id="projects">
-    <ion-card-header>
-      <ion-card-title>Projects Section</ion-card-title>
-    </ion-card-header>
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Title: Box 1</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 1.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Title: Box 2</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 2.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Title: Box 3</ion-card-title>
-        <ion-card-subtitle>Length: Short</ion-card-subtitle>
-        <ion-card-subtitle>
-          <a href="https://github.com/example/repo1">Source Code</a>
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Description: This is the description for box 3.
-      </ion-card-content>
-    </ion-card>
-  </ion-card>
-
   <!-- Experiences Subpage -->
   <ion-card id="experiences">
     <ion-card-header>
@@ -314,7 +199,7 @@
       <ion-list>
         <ion-item>
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            <img alt="Silhouette of mountains" src="../../assets/images/CSU_San_Bernardino_seal.svg.png" />
           </ion-thumbnail>
           <ion-list-header>
             <ion-label>
@@ -322,14 +207,14 @@
             </ion-label>
           </ion-list-header>
           <div class="text-content">
-            Length: 5/22--7/22  |       
+            Length: 5/22--7/22         
             Description: This is the description for box 1   
           </div>
         </ion-item>
   
         <ion-item>
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            <img alt="Silhouette of mountains" src="../../assets/images/dominos.jpeg" />
           </ion-thumbnail>
           <ion-list-header>
             <ion-label>
@@ -337,7 +222,7 @@
             </ion-label>
           </ion-list-header>
           <div class="text-content">
-            Length: 12/20--3/22  |       
+            Length: 12/20--3/22         
             Description: This is the description for box 2   
           </div>
         </ion-item>

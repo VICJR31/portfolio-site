@@ -34,6 +34,32 @@
 }
 
 // Custom classes below:
+ion-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons {
+  display: flex;
+  @media (max-width: 767px) {
+    display: none; /* Hide buttons on small screens */
+  }
+}
+
+.menu-icon {
+  display: none;
+  @media (max-width: 767px) {
+    display: block; /* Show menu icon on small screens */
+  }
+}
+
+.project-image {
+  width: 100%; /* Ensures the image takes up full width of the parent container */
+  height: 200px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensures the image covers the specified dimensions without distortion */
+  border-radius: 8px; /* Optional: add some rounded corners */
+}
+
 .text-content {
   padding: 10px; /* Adds space around the content */
   margin: 10px 0; /* Adds space above and below the content */
@@ -51,13 +77,25 @@
   margin-top: 50px; /* Adjust this value to move the text up or down */
   // align-self: flex-start; /* Adjust this value to move the text up or down */
 }
+
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .image-container img {
-  max-width: 100%;
+  max-width: 55%;
+  height: auto;
+  border-radius: 75%;
+}
+
+.image-containerII {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-containerII img {
+  max-width: 75%;
   height: auto;
   border-radius: 50%;
 }
