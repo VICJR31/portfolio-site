@@ -1,2 +1,118 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+// // src/theme/variables.scss
+
+// :root {
+//   --ion-color-primary: #3b5998; // Navy blue for primary elements
+//   --ion-color-secondary: #f5f5f5; // White for the background
+//   --ion-color-light: #ffffff; // White for text
+//   --ion-color-dark: #3b5998; // Dark for text background
+//   --ion-background-color: #f5f5f5; // Wite for the background
+//   --ion-text-color: var(--ion-color-dark); // Dark text color for contrast
+// }
+
+// src/theme/variables.scss
+
+
+
+
+
+// OFFICIAL COLOR SELECTION
+
+// Teal & Gold
+// :root {
+//   --ion-color-primary: #2A9D8F; // Teal for primary elements
+//   --ion-color-secondary: #E9C46A; // Gold for secondary elements
+//   --ion-color-light: #F4F4F9; // Light gray for text backgrounds
+//   --ion-color-dark: #264653; // Dark blue-gray for text
+//   --ion-background-color: #F4F4F9; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // Dark blue-gray text color for contrast
+//   --ion-link-color: #264653; // Dark blue-gray for links
+//   --ion-link-hover-color: #E76F51; // Reddish-orange for links on hover
+// }
+
+// Blue, White, & Gray
+// :root {
+//   --ion-color-primary: #3b5998; // Navy blue for primary elements
+//   --ion-color-secondary: #d5d5d5; // White for secondary elements
+//   --ion-color-light: #ffffff; // White for text backgrounds
+//   --ion-color-dark: #3b5998; // Navy blue for text
+//   --ion-background-color: #f5f5f5; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // Navy blue text color for contrast
+//   --ion-link-color: #3b5998; // Navy blue for links
+//   --ion-link-hover-color: #cccccc; // Light gray for links on hover
+// }
+
+
+// U.S.A.
+// :root {
+//   --ion-color-primary: #00274d; // Navy blue for primary elements
+//   --ion-color-secondary: #d20303; // Red for secondary elements
+//   --ion-color-light: #ffffff; // White for text backgrounds
+//   --ion-color-dark: #00274d; // Navy blue for text
+//   --ion-background-color: #f0f0f0; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // Navy blue text color for contrast
+//   --ion-link-color: #d20303; // Red for links
+//   --ion-link-hover-color: #004080; // Lighter blue for links on hover
+// }
+
+// Rams
+// :root {
+//   --ion-color-primary: #003594; // Rams Royal Blue for primary elements
+//   --ion-color-secondary: #ffd100; // Rams Yellow for secondary elements
+//   --ion-color-light: #ffffff; // White for text backgrounds
+//   --ion-color-dark: #003594; // Royal Blue for text
+//   --ion-background-color: #f0f0f0; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // Royal Blue text color for contrast
+//   --ion-link-color: #ffd100; // Yellow for links
+//   --ion-link-hover-color: #001f60; // Darker blue for links on hover
+// }
+
+
+// Dodgers
+// :root {
+//   --ion-color-primary: #005a9c; // Dodger Blue for primary elements
+//   --ion-color-secondary: #b7b7b7; // White for secondary elements
+//   --ion-color-light: #f0f0f0; // Light gray for text backgrounds
+//   --ion-color-dark: #005a9c; // Dodger Blue for text
+//   --ion-background-color: #ffffff; // White for the background
+//   --ion-text-color: var(--ion-color-dark); // Dodger Blue text color for contrast
+//   --ion-link-color: #c8102e; // Red for links
+//   --ion-link-hover-color: #003366; // Darker blue for links on hover
+// }
+
+
+
+// Warriors
+// :root {
+//   --ion-color-primary: #1d428a; // Warriors Blue for primary elements
+//   --ion-color-secondary: #ffc72c; // Warriors Gold for secondary elements
+//   --ion-color-light: #ffffff; // White for text backgrounds
+//   --ion-color-dark: #1d428a; // Warriors Blue for text
+//   --ion-background-color: #f5f5f5; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // Warriors Blue text color for contrast
+//   --ion-link-color: #ffc72c; // Gold for links
+//   --ion-link-hover-color: #003366; // Darker blue for links on hover
+// }
+
+// British Flag
+// :root {
+//   --ion-color-primary: #00247d; // British Blue for primary elements
+//   --ion-color-secondary: #cf142b; // British Red for secondary elements
+//   --ion-color-light: #ffffff; // White for text backgrounds
+//   --ion-color-dark: #00247d; // British Blue for text
+//   --ion-background-color: #f0f0f0; // Light gray for the background
+//   --ion-text-color: var(--ion-color-dark); // British Blue text color for contrast
+//   --ion-link-color: #cf142b; // British Red for links
+//   --ion-link-hover-color: #00247d; // British Blue for links on hover
+// }
+
+// French Flag
+:root {
+  --ion-color-primary: #0056a0; // French Blue for primary elements
+  --ion-color-secondary: #b50034; // White for secondary elements
+  --ion-color-light: #f5f5f5; // Light gray for text backgrounds
+  --ion-color-dark: #0056a0; // French Red for text
+  --ion-background-color: #f5f5f5; // Light gray for the background
+  --ion-text-color: var(--ion-color-dark); // French Red text color for contrast
+  --ion-link-color: #b50034; // French Blue for links
+  --ion-link-hover-color: #c7c7c7; // French Red for links on hover
+}
