@@ -1,0 +1,220 @@
+#home,
+#about,
+#projects,
+#experiences,
+#contact {
+  scroll-margin-top: 60px; /* Adjust this value based on your header height */
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+// Custom classes below:
+ion-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons {
+  display: flex;
+  @media (max-width: 767px) {
+    display: none; /* Hide buttons on small screens */
+  }
+}
+
+.menu-icon {
+  display: none;
+  @media (max-width: 767px) {
+    display: block; /* Show menu icon on small screens */
+  }
+}
+
+.project-image {
+  width: 100%; /* Ensures the image takes up full width of the parent container */
+  height: 200px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensures the image covers the specified dimensions without distortion */
+  border-radius: 8px; /* Optional: add some rounded corners */
+}
+
+.text-content {
+  padding: 10px; /* Adds space around the content */
+  margin: 10px 0; /* Adds space above and below the content */
+  text-align: left; /* Aligns text to the left */
+  border-left: 2px solid #ccc; /* Optional: Adds a border for visual separation */
+  line-height: 1.5; /* Improves readability */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px; /* Adjust this value to move the text up or down */
+  // align-self: flex-start; /* Adjust this value to move the text up or down */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img {
+  max-width: 55%;
+  height: auto;
+  border-radius: 75%;
+}
+
+.image-containerII {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-containerII img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.stacked-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.linkedin-link {
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--ion-color-primary);
+}
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+
+// ion-card {
+//   padding-top: 20px; /* Ensure this is larger than your header's height */
+// }
+
+ion-card-title {
+  font-size: 1.5em;
+}
+ion-card-subtitle {
+  font-size: 1.2em;
+}
+
+/* Media query to adjust font sizes for larger screens */
+@media (min-width: 768px) {
+  ion-card-title {
+    font-size: 2em;
+  }
+  ion-card-subtitle {
+    font-size: 1.5em;
+  }
+}
+
+// /* Media query to reset align-self for small screens */
+@media (max-width: 767px) {
+  .text-container {
+    margin-top: 0; /* Reset margin for small screens */  
+  }
+  .text-content {
+    padding-left: 20px; /* Increases left padding on smaller screens */
+    margin: 5px 0; /* Adjusts vertical margin for smaller screens */
+  }
+}
+
+//Colors
+
+
+// src/app/home/home.page.scss
+
+
+ion-header {
+  background: var(--ion-color-primary); /* Sets the background color of the header to teal */
+}
+
+ion-toolbar {
+  --background: var(--ion-color-primary); /* Sets the background color of the toolbar to teal */
+  --color: var(--ion-color-light); /* Sets the text color to light gray for better contrast */
+}
+
+ion-title,
+ion-buttons ion-button {
+  --color: var(--ion-color-light); /* Ensures text and buttons are light gray */
+}
+
+ion-card {
+  background-color: var(--ion-background-color); /* Uses light gray for card background */
+  color: var(--ion-text-color); /* Uses dark blue-gray for card text */
+  border: 1px solid var(--ion-color-primary); /* Uses teal for card border */
+}
+
+ion-card-header {
+  background-color: var(--ion-color-secondary); /* Uses gold for card header background */
+  color: var(--ion-color-light); /* Uses light gray for card header text */
+}
+
+ion-content {
+  --background: var(--ion-background-color); /* Uses light gray for background */
+}
+
+ion-title, 
+ion-card-title {
+  color: var(--ion-color-light); /* Uses light gray for titles */
+}
+
+a {
+  color: var(--ion-link-color); /* Uses dark blue-gray for links */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--ion-link-hover-color); /* Uses reddish-orange for link hover */
+}
+
+.hello-title {
+  color: var(--ion-text-color); /* Uses dark blue-gray for hello-title text */
+}
+
+.make-white {
+  color: var(--ion-color-light); /* Uses light gray for make-white class */
+}
+
+.make-blue {
+  background-color: var(--ion-color-primary); /* Uses gold for card header background */
+  color: var(--ion-color-light); /* Uses light gray for card header text */
+}
+
+ion-card-subtitle a {
+  color: var(--ion-color-light); /* Set the default link color to light gray */
+  text-decoration: none; /* Remove underline */
+}
+
+ion-card-subtitle a:hover {
+  color: var(--ion-link-hover-color); /* Change to reddish-orange on hover */
+}

@@ -1,0 +1,260 @@
+<!-- Testing NAVBAR -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Menu button visible only on small screens -->
+      <ion-menu-button class="menu-icon" slot="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alex's Site</ion-title>
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button (click)="scrollToElement('home')">Home</ion-button>
+      <ion-button (click)="scrollToElement('about')">About</ion-button>
+      <ion-button (click)="scrollToElement('projects')">Projects</ion-button>
+      <ion-button (click)="scrollToElement('experiences')">Experiences</ion-button>
+      <ion-button (click)="scrollToElement('contact')">Contact</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Side menu for mobile -->
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="scrollToElement('home')">Home</ion-item>
+      <ion-item button (click)="scrollToElement('about')">About</ion-item>
+      <ion-item button (click)="scrollToElement('projects')">Projects</ion-item>
+      <ion-item button (click)="scrollToElement('experiences')">Experiences</ion-item>
+      <ion-item button (click)="scrollToElement('contact')">Contact</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">MyWebsite</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Home Subpage -->
+  <ion-card id="home">    
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" size="12">
+            <div class="text-container">
+              <ion-card-title class="hello-title">Hello There!</ion-card-title>
+              <ion-card-subtitle>I'm Alex!</ion-card-subtitle>
+              <ion-button (click)="scrollToElement('contact')" expand="block">CONTACT ME!</ion-button>
+            </div>
+          </ion-col>
+
+          <ion-col size-md="6" size="12">
+            <div class="image-container">
+              <!-- <img alt="Profile Pic I" src="../../assets/images/IMG_7231.jpg" />      -->
+              <!-- <img alt="Profile Pic I" src="../../../www/assets/images/IMG_7231.jpg" /> -->
+              <img alt="Profile Pic I" src="../../../www/assets/images/IMG_7231.jpg" />
+            </div>
+          </ion-col>    
+        </ion-row>
+      </ion-grid>   
+    </ion-card-content>
+  </ion-card>
+
+  <!-- About Subpage -->
+  <ion-card id="about">    
+    <ion-card-header>
+      <ion-card-title>About Section</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" size="12">
+            <div class="image-containerII">
+              <img alt="Profile Pic II" src="../../assets/images/IMG_2722.jpg" />    
+            </div>
+          </ion-col>
+
+          <ion-col size-md="6" size="12">
+            <div>
+              <p>
+                "A young, faithful, 'strapping' computer programmer whose coding history goes back to late 2017" isn't how I'd introduce myself. But hey? It does leave an impression, huh?
+              </p>
+
+              <br>
+
+              <p>
+                Like I mentioned ten seconds ago, my background stems from when I was a young lad in high school, entering my senior year. Wanting to prep for college, I searched for a way forward, unsure of what major to pursue. Then, after observing my older brother tinkering with a website for a class assignment, he showed me all the neat things he could do. So I gave it a try.
+              </p>
+
+              <br>
+
+              <p>
+                After I did, I've never looked back since.
+              </p>
+
+              <br>
+
+              <p>
+                I have experience in frontend programming, with a mild understanding of the backend. My main languages include Python, JavaScript, HTML, CSS, and frameworks like Angular, Ionic, and Bootstrap. I love history, particularly American history. So if you need a patriotic website man to do the job, I'm your man. o7
+              </p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>   
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Projects Subpage -->
+  <ion-card id="projects">
+    <ion-card-header>
+      <ion-card-title>Projects Section</ion-card-title>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-sm="6" size-md="4">
+          <ion-card>
+            <img
+              alt="TL-191 Book Series"
+              src="../../assets/images/Timeline-191_WWI.png"
+              class="responsive-image project-image"
+            />
+            <ion-card-header class="make-blue">
+              <ion-card-title>TL-191 Book Series</ion-card-title>
+              <ion-card-subtitle class="make-white">06/2019–07/2020</ion-card-subtitle>
+              <ion-card-subtitle>
+                <a href="https://github.com/VICJR31/vicjr31.github.io">Source Code</a>
+              </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              Description: A Bootstrap-powered book catalog based on a fictional series where America is split in two following the Civil War. The story takes place from 1862 to 1944.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="12" size-sm="6" size-md="4">
+          <ion-card>
+            <img
+              alt="Health App"
+              src="../../assets/images/goldenhealth.png"
+              class="responsive-image project-image"
+            />
+            <ion-card-header class="make-blue">
+              <ion-card-title>Health Web App</ion-card-title>
+              <ion-card-subtitle class="make-white">08/2021–12/2021
+              </ion-card-subtitle>
+              <ion-card-subtitle>
+                <a href="https://gitlab.com/VICJR31/health-app/-/tree/master?ref_type=heads">Source Code</a>
+              </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              Description: Made with the tools provided by Ionic, this health app is the perfect tool to cater to all your fitness and wellness needs. Track your calorie intake, blood pressure, and other health metrics today!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="12" size-sm="6" size-md="4">
+          <ion-card>
+            <img
+              alt="Trench Wars"
+              src="../../assets/images/triple-entente-14176153.jpg.webp"
+              class="responsive-image project-image"
+            />
+            <ion-card-header class="make-blue">
+              <ion-card-title>Trench Wars</ion-card-title>
+              <ion-card-subtitle class="make-white">08/2022–12/2022</ion-card-subtitle>
+              <ion-card-subtitle>
+                <a href="https://github.com/VICJR31/My-project-2">Source Code</a>
+              </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              Description: Set in the final stages of the most destructive war of its time, the Great War, play as the French elite unit, the Blue Devils, as you push the Kaiser's troops back across Northern France!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <!-- Add more ion-col elements for additional cards -->
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- Experiences Subpage -->
+  <ion-card id="experiences">
+    <ion-card-header>
+      <ion-card-title>Experiences Section</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list> 
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="../../assets/images/dominos.jpeg" />
+          </ion-thumbnail>
+          <ion-list-header>
+            <ion-label>
+              <h2>Insider at Domino's Pizza</h2>
+            </ion-label>
+          </ion-list-header>
+          <!-- <div class="text-content">
+            Location: Moreno Valley <br> 
+          </div> -->
+          <div class="text-content">
+            Length: 12/20–03/22 <br> 
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="../../assets/images/CSU_San_Bernardino_seal.svg.png" />
+          </ion-thumbnail>
+          <ion-list-header>
+            <ion-label>
+              <h2>Instructional Student Assistant (ISA)</h2>
+            </ion-label>
+          </ion-list-header>
+          <!-- <div class="text-content">
+            Location: CSUSB <br>  -->
+          <!-- </div> -->
+          <div class="text-content">
+            Length: 05/22–07/22 <br> 
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Subpage -->
+  <ion-card id="contact">
+    <!-- <ion-card-header>
+      <ion-card-title>Contact Me</ion-card-title>
+    </ion-card-header> -->
+
+    <div class="stacked-container ion-padding-bottom" id="contact">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Contact Me</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Email: alejandroromo31st&#64;gmail.com</p>
+          <ion-button href="https://www.linkedin.com/in/alejandro-romo-16399626b/" target="_blank" expand="block">LinkedIn</ion-button>
+          <ion-button href="https://github.com/VICJR31" target="_blank" expand="block">GitHub</ion-button>
+          <!-- <ion-button href="https://gitlab.com/alejandroromo31st" target="_blank" expand="block">GitLab</ion-button> -->
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> &copy; 2024 AVR. All rights reserved. </ion-title>
+  </ion-toolbar>
+  <!-- <ion-content>
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+  </ion-content> -->
+</ion-footer>
