@@ -107,12 +107,12 @@
 
 // French Flag
 :root {
-  --ion-color-primary: #00a043; // French Blue for primary elements
-  --ion-color-secondary: #b50034; // White for secondary elements
-  --ion-color-light: #f5f5f5; // Light gray for text backgrounds
-  --ion-color-dark: #0056a0; // French Red for text
-  --ion-background-color: #f5f5f5; // Light gray for the background
+  --ion-color-primary: #0056a0; // French Blue for primary elements
+  --ion-color-secondary: #b50034; // French Red for secondary elements
+  --ion-color-light: #f5f5f5; // French White for text backgrounds
+  --ion-color-dark: #0056a0; // French Blue for text
+  --ion-background-color: #f5f5f5; // French White for the background
   --ion-text-color: var(--ion-color-dark); // French Red text color for contrast
-  --ion-link-color: #b50034; // French Blue for links
-  --ion-link-hover-color: #c7c7c7; // French Red for links on hover
+  --ion-link-color: #b50034; // French Red for links
+  --ion-link-hover-color: #c7c7c7; // Light gray for links on hover
 }
